@@ -65,14 +65,29 @@ let customers = [
 
 ];
 
-let product = products[0];
-let customer = customers[1];
+let product = products[2];
+let customer = customers[0];
 let sale = product.price - (product.price * (product.discount["percentage"] / 100));
+let phoneSpecifications = [product.specifications["color"], product.specifications["storage"], 
+                            product.specifications["processor"], product.specifications["ram"], 
+                            product.specifications["camera"],];
 
 if ( customer.budget > product.price ) {
-    console.log(`${customer.name} может позволить себе ${product.name} за ${product.price} руб.`);
+    console.log(`Бюджет ${customer.name} = ${customer.budget} руб. Может позволить себе ${product.name} за ${product.price} руб.`);
+    console.log(`${product.name} имеет следующие характеристики: 
+                цвет - ${phoneSpecifications[0]}, 
+                память - ${phoneSpecifications[1]}, 
+                процессор - ${phoneSpecifications[2]}, 
+                оперативная память - ${phoneSpecifications[3]}, 
+                камера - ${phoneSpecifications[4]}`);
     console.log(`К ${product.name} полагается скидка ${product.discount["percentage"]}% до ${product.discount["expirationDate"]}`);
-    console.log(`Итоговая цена с учетом скидки будет = ${sale}`);
+    console.log(`Итоговая цена с учетом скидки будет = ${sale} руб.`);
+    if (product.inStock === false) {
+        console.log(`Но ${product.name} нет в наличии.`);
+    }
+    else {
+        console.log(`${product.name} в наличии, покупка может быть совершена успешно!`);
+    }
 }
 else if (customer.budget < product.price) {
     console.log(`${customer.name} не может позволить себе новый телефон, его бюджет - ${customer.budget}руб. :(`);
