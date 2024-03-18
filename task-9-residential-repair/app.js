@@ -40,6 +40,9 @@ const calculate = () => {
                     (inputCountService2 * inputPriceService2) + 
                     (inputCountService3 * inputPriceService3);
 
+    // количество всех услуг
+    let allCountServices = inputCountService1 + inputCountService2 + inputCountService3;
+
     // объект с нахождением итоговой стоимости каждой отдельной услуги
     const serviceSum = {
         '1': (inputCountService1 * inputPriceService1), 
@@ -51,7 +54,8 @@ const calculate = () => {
     resultDiv.innerHTML = `
         <p>№1 Укладка плитки = ${serviceSum[1]} ден. ед.</p> 
         <p>№2 Штукатурка стен = ${serviceSum[2]} ден. ед.</p> 
-        <p>№3 Установка сантехники = ${serviceSum[3]} ден. ед.</p> 
+        <p>№3 Установка сантехники = ${serviceSum[3]} ден. ед.</p>
+        <p>Общий объём работ = ${allCountServices}</p> 
         <p>Итог = ${allServiceSum} ден. ед.</p>   
     `;
 }
