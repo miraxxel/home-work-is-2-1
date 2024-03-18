@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ремонт жилищных помещений</title>
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="title">Рачсёт стоимости услуг по ремонту жилых помещений</h1>
+        <div class="form" id="form">
+            <label for="service">Представлены следующие услуги:</label>
+            <br><br> 
+
+            <label for="service-1">№1 Укладка плитки</label>
+            <br> 
+            <label for="service-1">Стоимость услуги:</label> 
+            <input type="text" class="service" id="price-service-1">
+            <br>
+            <label for="service-1">Кол-во услуг:</label> 
+            <input type="text" class="service" id="count-service-1">
+            <br><br>
+
+            <label for="service-2">№2 Штукатурка стен</label>
+            <br> 
+            <label for="service-2">Стоимость услуги:</label> 
+            <input type="text" class="service" id="price-service-2">
+            <br>
+            <label for="service-2">Кол-во услуг:</label> 
+            <input type="text" class="service" id="count-service-2">
+            <br><br>
+
+            <label for="service-3">№3 Установка сантехники</label>
+            <br> 
+            <label for="service-3">Стоимость услуги:</label> 
+            <input type="text" class="service" id="price-service-3">
+            <br>
+            <label for="service-3">Кол-во услуг:</label> 
+            <input type="text" class="service" id="count-service-3">
+            <br><br>
+            
+            <button onclick="calculate()" id="saveBtn">Рассчитать</button>
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+</html>
