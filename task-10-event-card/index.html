@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventCards</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2 class="title">Страница событий</h2>
+        <div class="event-form">
+            <input onchange="checkInput()" type="text" class="event-input" id="eventName" placeholder="Название события">
+            <input onchange="checkInput()" type="text" class="event-input" id="eventDate" placeholder="Дата события">
+            <input onchange="checkInput()" type="text" class="event-input" id="eventText" placeholder="Описание события">
+            <input onchange="checkInput()" type="text" class="event-input" id="eventPlace" placeholder="Место события">
+            <input onchange="checkInput()" type="file" id="eventImage" accept="image/*">
+            <button onclick="addEvent()" class="event-button" id="eventBtn" disabled>Добавить событие</button>
+        </div>
+        <ul class="event-list" id="eventList1"></ul>
+        <ul class="event-list" id="eventList2"></ul>
+        <ul class="event-list" id="eventList3"></ul>
+        <ul class="event-list" id="eventList4"></ul>
+        <ul class="event-list" id="eventList5">
+            <li><img src="" id="eventImagePreview"></li> <!-- добавление картинки -->
+        </ul>
+    </div>
+</body>
+</html>
+
